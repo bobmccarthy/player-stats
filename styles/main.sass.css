@@ -1,0 +1,26 @@
+body {
+  background-color: #CFC9C7; }
+
+#addForm {
+  background-color: #3E3E3C;
+  color: white;
+  margin-left: 3em;
+  width: 25%;
+  text-align: center;
+  padding: 3em 0; }
+  #addForm > div {
+    padding-top: 1em; }
+
+#quarterbacksBox {
+  border: 3px solid black; }
+
+#runningbacks {
+  border: 3px solid red; }
+
+#kickers {
+  border: 3px solid green; }
+
+.seperator {
+  padding: 0.5em 0.5em;
+  border: 4px solid yellow;
+  display: inline-block; }

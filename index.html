@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
+</head>
+<body>
+	<form id="statForm">
+
+	</form>
+	<form id="addForm">
+		<div><input type="text" id="newPlayer" placeholder="Player Name"></div>
+		<div>Select Position of New Player <br>
+		<input type="radio" name="PositionSelector" id="radio_1" value="Quarterback"> Quarterback <br>
+		<input type="radio" name="PositionSelector" id="radio_2" value="Running Back"> Runningback <br>
+		<input type="radio" name="PositionSelector" id="radio_3" value="Kicker"> Kicker <br>
+		</div>
+		<div><input type="text" id="teamName" placeholder="Team Name"></div>
+		<button id="addPlayer">Add Player</button>
+	</form>
+	<section>
+
+		<div><h2>QuarterBacks:</h2><div id="quarterbacksBox"></div></div>
+		<div><h2>Running Backs:</h2><div id="runningbacks"></div></div>
+		<div><h2>Kickers:</h2><div id="kickers"></div></div>
+		<button id="addYards">add yards</button>
+	</section>
+
+
+
+<script type="text/javascript" src="/node_modules/backbone/node_modules/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/node_modules/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="/scripts/main.js"></script>
+</body>
+</html>
