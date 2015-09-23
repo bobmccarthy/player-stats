@@ -11,16 +11,15 @@ body {
   #addForm > div {
     padding-top: 1em; }
 
-#quarterbacksBox {
-  border: 3px solid black; }
+table {
+  text-align: center; }
 
-#runningbacks {
-  border: 3px solid red; }
+.rowBorder {
+  border: 2px solid black;
+  padding: 0.5em 0.5em; }
 
-#kickers {
-  border: 3px solid green; }
-
-.seperator {
-  padding: 0.5em 0.5em;
-  border: 4px solid yellow;
-  display: inline-block; }
+.title {
+  padding: .5em 0;
+  text-align: center;
+  font-size: 3em;
+  font-family: futura; }

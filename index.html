@@ -5,32 +5,125 @@
 	<link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
 </head>
 <body>
-	<form id="statForm">
-
-	</form>
+	
 	<form id="addForm">
 		<div><input type="text" id="newPlayer" placeholder="Player Name"></div>
-		<div>Select Position of New Player <br>
-		<input type="radio" name="PositionSelector" id="radio_1" value="Quarterback"> Quarterback <br>
-		<input type="radio" name="PositionSelector" id="radio_2" value="Running Back"> Runningback <br>
-		<input type="radio" name="PositionSelector" id="radio_3" value="Kicker"> Kicker <br>
+		<div>Position:
+			<select id="PositionSelection">
+				<option>Select Position</option>
+				<option id="quarterbackP"> Quarterback </option> 
+				<option id="runningbackP"> Running Back </option>
+				<option id="kickerP"> Kicker </option>
+			</select>
 		</div>
 		<div><input type="text" id="teamName" placeholder="Team Name"></div>
+		<div><input type="number" id="playerNumber" placeholder="Number"></div>
 		<button id="addPlayer">Add Player</button>
 	</form>
-	<section>
-
-		<div><h2>QuarterBacks:</h2><div id="quarterbacksBox"></div></div>
-		<div><h2>Running Backs:</h2><div id="runningbacks"></div></div>
-		<div><h2>Kickers:</h2><div id="kickers"></div></div>
-		<button id="addYards">add yards</button>
-	</section>
 
 
 
-<script type="text/javascript" src="/node_modules/backbone/node_modules/underscore/underscore-min.js"></script>
-<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/node_modules/backbone/backbone-min.js"></script>
-<script type="text/javascript" src="/scripts/main.js"></script>
+	<form id="updateQB">
+		<div class="title">Your Quarterback Stats</div>
+		<input id="addQbName" type="text" placeholder="player name">
+ 		<select id="typeSelectionQb">
+			<option id="touchdown">Touchdown</option>
+			<option id="completion">Completion</option>
+			<option id="incomplete">Incomplete</option>
+			<option id="sack">Sack</option>
+			<option id="interception">Interception</option>
+			<option id="fumble">Fumble</option>
+		</select>
+		<input id="addQbYards" type="text" placeholder="yards">
+		
+		<button id="addQBStatComplete">Add Stat</button>
+	</form>
+	<table class="QBtable">
+		<thead>
+			<tr>
+				<th class="rowBorder namesky">Name</th>
+				<th class="rowBorder">Team</th>
+				<th class="rowBorder">Points</th>
+				<th class="rowBorder">Attempts</th>
+				<th class="rowBorder">Completions</th>
+				<th class="rowBorder">Yards</th>
+				<th class="rowBorder">TD</th>
+				<th class="rowBorder">Interceptions</th>
+				<th class="rowBorder">Sacks</th>
+				<th class="rowBorder">Longest</th>
+				<th class="rowBorder">Yds/Atp</th>
+			</tr>
+		</thead>
+		<tbody id="QBPlayers">
+		</tbody>
+	</table>
+
+
+	<form id="updateRB">
+		<div class="title">Your Runningback Stats</div>
+		<input id="addRbName" type="text" placeholder="player name">
+ 		<select>
+			<option name="touchdown">Touchdown</option>
+			<option name="completion">Completion</option>
+			<option name="incomplete">Incomplete</option>
+			<option name="sack">Sack</option>
+			<option name="interception">Interception</option>
+			<option name="fumble">Fumble</option>
+		</select>
+		<input id="addRbYards" type="text" placeholder="yards">
+		
+		<button id="addRBStatComplete">Add Stat</button>
+	</form>
+
+	<table class="RBtable">
+		<thead>
+			<tr>
+				<th class="rowBorder namesky">Name</th>
+				<th class="rowBorder">Team</th>
+				<th class="rowBorder">Points</th>
+				<th class="rowBorder">Rushes</th>
+				<th class="rowBorder">Yards</th>
+				<th class="rowBorder">20+Yds</th>
+				<th class="rowBorder">TD</th>
+				<th class="rowBorder">1st Downs</th>
+				<th class="rowBorder">Fumbles</th>
+				<th class="rowBorder">Longest Rush</th>
+				<th class="rowBorder">Yards/Rush</th>
+				
+			</tr>
+		</thead>
+		<tbody id="RBPlayers">
+		</tbody>
+	</table>
+
+
+	<form id="updateK">
+		<div class="title">Your Kicker Stats</div>
+		<input id="addKName" type="text" placeholder="player name">
+ 		<select>
+			<option name="fieldgoal">Field Goal</option>
+			<option name="completion">Miss</option>
+		</select>
+		<input id="addFgYards" type="text" placeholder="yards">
+		<button id="addKStatComplete">Add Stat</button>
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<th class="rowBorder namesky">Name</th>
+				<th class="rowBorder">Team</th>
+				<th class="rowBorder">Points</th>
+				<th class="rowBorder">Attempts</th>
+				<th class="rowBorder">Made</th>
+				<th class="rowBorder">Longest FG</th>
+			</tr>
+		</thead>
+		<tbody id="KPlayers">
+		</tbody>
+	</table>
+
+
+
+<script type="text/javascript" src="/scripts/bundle.js"></script>
 </body>
 </html>
